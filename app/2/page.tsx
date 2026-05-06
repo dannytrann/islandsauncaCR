@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google'
+import { IMGS } from '@/lib/images'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -144,6 +145,17 @@ export default function Design2() {
           padding: '12rem 12vw 8rem',
           position: 'relative',
         }}>
+          {/* Hero image — right side, clipped */}
+          <div style={{
+            position: 'absolute', top: 0, right: 0, width: '42%', bottom: 0,
+            backgroundImage: `url('${IMGS.hero}')`,
+            backgroundSize: 'cover', backgroundPosition: 'center',
+            opacity: 0.18,
+          }} />
+          <div style={{
+            position: 'absolute', top: 0, right: '42%', width: '15%', bottom: 0,
+            background: 'linear-gradient(to right, #f7f4ef, transparent)',
+          }} />
           <span className="chapter-num" style={{ right: '8vw', top: '18%', fontFamily: cormorant.style.fontFamily }}>01</span>
 
           <p className="hero-brand" style={{
@@ -324,6 +336,12 @@ export default function Design2() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* ── Photo Moment ─────────────────────── */}
+        <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '60vh', minHeight: '400px' }}>
+          <div style={{ backgroundImage: `url('${IMGS.hero}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
         </section>
 
         <div className="minimal-rule" style={{ margin: '0 8vw' }} />

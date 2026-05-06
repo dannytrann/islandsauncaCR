@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Bebas_Neue, Barlow } from 'next/font/google'
+import { IMGS } from '@/lib/images'
 import { useEffect, useRef } from 'react'
 
 const bebas = Bebas_Neue({ subsets: ['latin'], weight: '400', display: 'swap' })
@@ -259,6 +260,15 @@ export default function Design5() {
             display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
             position: 'relative', overflow: 'hidden',
           }}>
+            {/* Actual photo blended beneath aurora */}
+            <div style={{
+              position: 'absolute', inset: 0,
+              backgroundImage: `url('${IMGS.hero}')`,
+              backgroundSize: 'cover', backgroundPosition: 'center 40%',
+              opacity: 0.28, mixBlendMode: 'luminosity',
+            }} />
+            {/* Deep dark overlay */}
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(7,13,20,0.55)' }} />
             <div className="scan-line" />
 
             <p style={{ fontSize: '0.65rem', letterSpacing: '0.45em', color: 'rgba(0,229,204,0.6)', marginBottom: '2.5rem', textTransform: 'uppercase' }}>
@@ -332,6 +342,20 @@ export default function Design5() {
                 and come together on the wild edge of the Pacific Northwest.
               </p>
             </div>
+          </section>
+
+          {/* ── Gallery Strip ─────────────────────── */}
+          <section style={{ display: 'flex', height: '320px', overflow: 'hidden' }}>
+            {[IMGS.hero, IMGS.interior, IMGS.plungeSocial, IMGS.deck, IMGS.plungeAerial].map((src, i) => (
+              <div key={i} style={{
+                flex: 1, backgroundImage: `url('${src}')`,
+                backgroundSize: 'cover', backgroundPosition: 'center',
+                position: 'relative',
+                transition: 'flex 0.4s ease',
+              }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'rgba(7,13,20,0.4)' }} />
+              </div>
+            ))}
           </section>
 
           {/* ── Experience ────────────────────────── */}

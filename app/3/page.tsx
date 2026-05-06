@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Anton, Source_Serif_4 } from 'next/font/google'
+import { IMGS } from '@/lib/images'
 
 const anton = Anton({ subsets: ['latin'], weight: '400', display: 'swap' })
 const sourceSerif = Source_Serif_4({ subsets: ['latin'], weight: ['300', '400', '600'], style: ['normal', 'italic'], display: 'swap' })
@@ -195,6 +196,29 @@ export default function Design3() {
           </div>
         </section>
 
+        {/* ── Cinematic Photo ───────────────── */}
+        <section style={{
+          height: '80vh', minHeight: '520px', position: 'relative', overflow: 'hidden',
+          backgroundImage: `url('${IMGS.hero}')`,
+          backgroundSize: 'cover', backgroundPosition: 'center 40%',
+          backgroundAttachment: 'fixed',
+        }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,15,30,0.55)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #060f1e 0%, transparent 20%, transparent 80%, #060f1e 100%)' }} />
+          <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', alignItems: 'center', padding: '0 5vw' }}>
+            <p style={{
+              fontFamily: sourceSerif.style.fontFamily,
+              fontSize: 'clamp(1.3rem, 3vw, 2.2rem)',
+              color: 'rgba(255,255,255,0.75)',
+              fontStyle: 'italic', fontWeight: 300,
+              maxWidth: '560px', lineHeight: 1.6,
+              borderLeft: '2px solid #00c9b1', paddingLeft: '2rem',
+            }}>
+              "A floating sauna and ocean plunge experience designed for deep relaxation, connection, and unforgettable moments on the coast."
+            </p>
+          </div>
+        </section>
+
         {/* ── Wave ──────────────────────────── */}
         <div style={{ overflow: 'hidden', lineHeight: 0, background: '#060f1e' }}>
           <svg viewBox="0 0 1440 60" style={{ width: '100%', display: 'block' }} preserveAspectRatio="none">
@@ -251,6 +275,14 @@ export default function Design3() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* ── Photo Grid ────────────────────── */}
+        <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '280px 280px', gap: '3px' }}>
+          <div style={{ backgroundImage: `url('${IMGS.plungeSocial}')`, backgroundSize: 'cover', backgroundPosition: 'center', gridRow: '1 / 3' }} />
+          <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          <div style={{ backgroundImage: `url('${IMGS.deck}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          <div style={{ backgroundImage: `url('${IMGS.plungeAerial}')`, backgroundSize: 'cover', backgroundPosition: 'center', gridColumn: '2 / 4' }} />
         </section>
 
         {/* ── Wave ─────────────────────────── */}

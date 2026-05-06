@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { IMGS } from '@/lib/images'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -140,11 +141,16 @@ export default function Design1() {
           display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
           textAlign: 'center', padding: '8rem 2rem 5rem',
           position: 'relative', overflow: 'hidden',
+          backgroundImage: `url('${IMGS.hero}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 40%',
         }}>
-          {/* Radial amber glow */}
+          {/* Dark image overlay */}
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,5,2,0.72)', pointerEvents: 'none' }} />
+          {/* Radial amber glow on top of overlay */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse 80% 60% at 50% 65%, rgba(200,135,42,0.09) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 80% 60% at 50% 65%, rgba(200,135,42,0.12) 0%, transparent 70%)',
             pointerEvents: 'none',
           }} />
 
@@ -265,6 +271,19 @@ export default function Design1() {
           </div>
         </section>
 
+        {/* ── Photo Strip ──────────────────────────── */}
+        <section style={{ padding: '0 2.5rem 6rem' }}>
+          <div style={{ maxWidth: '1150px', margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '3px', height: '420px' }}>
+              <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,10,0.3)' }} />
+              </div>
+              <div style={{ backgroundImage: `url('${IMGS.plungeSocial}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div style={{ backgroundImage: `url('${IMGS.deck}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            </div>
+          </div>
+        </section>
+
         {/* ── Sauna Philosophy ─────────────────────── */}
         <section style={{ background: 'linear-gradient(135deg, #110900 0%, #0a0a0a 100%)', padding: '9rem 2.5rem' }}>
           <div style={{ maxWidth: '780px', margin: '0 auto', textAlign: 'center' }}>
@@ -367,19 +386,26 @@ export default function Design1() {
         </section>
 
         {/* ── Atmosphere ───────────────────────────── */}
-        <section style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #110a02 50%, #0a0a0a 100%)', padding: '7rem 2.5rem' }}>
-          <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.62rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: '#c8872a', marginBottom: '2rem' }}>Atmosphere</p>
-            <div style={{ display: 'flex', gap: '3rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              {['Warm Wood', 'Ocean Air', 'Soft Steam'].map((a, i) => (
-                <div key={i} style={{ textAlign: 'center' }}>
-                  <p style={{ fontFamily: playfair.style.fontFamily, color: '#c8872a', fontSize: '1.1rem', marginBottom: '0.3rem', fontStyle: 'italic' }}>{a}</p>
-                  <div style={{ width: '24px', height: '1px', background: 'rgba(200,135,42,0.3)', margin: '0 auto' }} />
+        <section style={{
+          position: 'relative', height: '70vh', minHeight: '480px', overflow: 'hidden',
+          backgroundImage: `url('${IMGS.plungeSocial}')`,
+          backgroundSize: 'cover', backgroundPosition: 'center 30%',
+          backgroundAttachment: 'fixed',
+        }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,4,1,0.62)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,10,10,0.6) 0%, transparent 40%, transparent 60%, rgba(10,10,10,0.7) 100%)' }} />
+          <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '2rem' }}>
+            <p style={{ fontSize: '0.62rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: '#c8872a', marginBottom: '2rem', opacity: 0.85 }}>Atmosphere</p>
+            <div style={{ display: 'flex', gap: '4rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
+              {['Warm Wood', 'Ocean Air', 'Soft Steam'].map((a) => (
+                <div key={a} style={{ textAlign: 'center' }}>
+                  <p style={{ fontFamily: playfair.style.fontFamily, color: '#f0e4c8', fontSize: '1.15rem', fontStyle: 'italic' }}>{a}</p>
+                  <div style={{ width: '24px', height: '1px', background: 'rgba(200,135,42,0.5)', margin: '0.5rem auto 0' }} />
                 </div>
               ))}
             </div>
-            <p style={{ color: '#5a4838', fontSize: '0.88rem', lineHeight: 2, marginTop: '2.5rem' }}>
-              West Coast calm. Scandinavian tradition. Pacific edge.<br />A space designed to feel natural, grounded, and timeless.
+            <p style={{ fontFamily: playfair.style.fontFamily, color: 'rgba(240,228,200,0.55)', fontSize: 'clamp(1rem, 2vw, 1.3rem)', fontStyle: 'italic', maxWidth: '500px' }}>
+              West Coast calm. Scandinavian tradition. Pacific edge.
             </p>
           </div>
         </section>

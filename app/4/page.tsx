@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Lora, Nunito_Sans } from 'next/font/google'
+import { IMGS } from '@/lib/images'
 
 const lora = Lora({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal', 'italic'], display: 'swap' })
 const nunito = Nunito_Sans({ subsets: ['latin'], weight: ['300', '400', '600'], display: 'swap' })
@@ -174,16 +175,19 @@ export default function Design4() {
         {/* ── Hero ────────────────────────────────── */}
         <section style={{
           minHeight: '100vh',
-          background: 'radial-gradient(ellipse 110% 100% at 50% 80%, #3d1a08 0%, #2d1208 30%, #1c0f05 70%)',
+          backgroundImage: `url('${IMGS.hero}')`,
+          backgroundSize: 'cover', backgroundPosition: 'center 45%',
           display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
           textAlign: 'center', padding: '8rem 2rem 5rem',
           position: 'relative', overflow: 'hidden',
         }}>
+          {/* Warm dark overlay */}
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(20,8,2,0.72)' }} />
           {/* Warm gradient bloom */}
           <div style={{
             position: 'absolute', bottom: '-10%', left: '50%', transform: 'translateX(-50%)',
             width: '80%', height: '60%',
-            background: 'radial-gradient(ellipse, rgba(196,114,58,0.2) 0%, rgba(140,60,20,0.1) 40%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(196,114,58,0.25) 0%, rgba(140,60,20,0.1) 40%, transparent 70%)',
             filter: 'blur(40px)', pointerEvents: 'none',
             animation: 'emberFlicker 5s ease-in-out infinite',
           }} />
@@ -314,6 +318,16 @@ export default function Design4() {
             "The sauna softens the body.<br />The ocean sharpens the mind.<br />
             <span style={{ color: '#c4723a' }}>Together, they create a full reset.</span>"
           </p>
+        </section>
+
+        {/* ── Plunge Photo ──────────────────────── */}
+        <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '55vh', minHeight: '380px' }}>
+          <div style={{ backgroundImage: `url('${IMGS.plungeSocial}')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(28,15,5,0.2)' }} />
+          </div>
+          <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(28,15,5,0.15)' }} />
+          </div>
         </section>
 
         <div className="divider-warm">
