@@ -113,6 +113,16 @@ export default function Design1() {
           transition: background 0.25s ease, color 0.25s ease;
         }
         .nav-book:hover { background: rgba(200,135,42,0.12); }
+
+        @media (max-width: 768px) {
+          .d1-nav { padding: 1rem 1.25rem !important; }
+          .d1-overview { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .d1-photos { grid-template-columns: 1fr !important; height: auto !important; }
+          .d1-photos > div { height: 220px; }
+          .d1-events { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .d1-drinks { grid-template-columns: 1fr !important; }
+          .d1-fixedbg { background-attachment: scroll !important; }
+        }
       `}</style>
 
       <div style={{ background: '#0a0a0a', color: '#e8d5b7', fontFamily: dm.style.fontFamily, overflowX: 'hidden' }}>
@@ -125,7 +135,7 @@ export default function Design1() {
           borderBottom: '1px solid rgba(200,135,42,0.08)',
           backdropFilter: 'blur(12px)',
           background: 'rgba(10,10,10,0.82)',
-        }}>
+        }} className="d1-nav">
           <span style={{ fontFamily: playfair.style.fontFamily, fontSize: '1.1rem', color: '#c8872a', letterSpacing: '0.08em' }}>
             Pacific Sauna
           </span>
@@ -217,7 +227,7 @@ export default function Design1() {
 
         {/* ── Overview ─────────────────────────────── */}
         <section style={{ maxWidth: '960px', margin: '0 auto', padding: '9rem 2.5rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2.2fr', gap: '5rem', alignItems: 'start' }}>
+          <div className="d1-overview" style={{ display: 'grid', gridTemplateColumns: '1fr 2.2fr', gap: '5rem', alignItems: 'start' }}>
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: '#c8872a', marginBottom: '1.2rem' }}>Overview</p>
               <div className="divider-line" style={{ width: '36px', height: '2px', background: '#c8872a', transformOrigin: 'left' }} />
@@ -274,7 +284,7 @@ export default function Design1() {
         {/* ── Photo Strip ──────────────────────────── */}
         <section style={{ padding: '0 2.5rem 6rem' }}>
           <div style={{ maxWidth: '1150px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '3px', height: '420px' }}>
+            <div className="d1-photos" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '3px', height: '420px' }}>
               <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,10,0.3)' }} />
               </div>
@@ -307,7 +317,7 @@ export default function Design1() {
         {/* ── Private Events ───────────────────────── */}
         <section style={{ padding: '9rem 2.5rem' }}>
           <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '6rem', alignItems: 'start' }}>
+            <div className="d1-events" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '6rem', alignItems: 'start' }}>
               <div>
                 <p style={{ fontSize: '0.62rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: '#c8872a', marginBottom: '1.5rem' }}>Private Events & Upper Deck</p>
                 <h2 style={{
@@ -366,7 +376,7 @@ export default function Design1() {
             <p style={{ color: '#5a4838', marginBottom: '3.5rem', lineHeight: 2, fontSize: '0.88rem' }}>
               Our offerings are minimal by design — chosen to support<br />the experience rather than distract from it.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px', background: 'rgba(200,135,42,0.08)' }}>
+            <div className="d1-drinks" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px', background: 'rgba(200,135,42,0.08)' }}>
               {[
                 { name: 'Cultured Kombucha', price: '$7.00' },
                 { name: 'Glacier Water', price: '$5.00' },
@@ -386,7 +396,7 @@ export default function Design1() {
         </section>
 
         {/* ── Atmosphere ───────────────────────────── */}
-        <section style={{
+        <section className="d1-fixedbg" style={{
           position: 'relative', height: '70vh', minHeight: '480px', overflow: 'hidden',
           backgroundImage: `url('${IMGS.plungeSocial}')`,
           backgroundSize: 'cover', backgroundPosition: 'center 30%',

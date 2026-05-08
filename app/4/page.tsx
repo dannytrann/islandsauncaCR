@@ -143,6 +143,16 @@ export default function Design4() {
           color: #f0c080;
           border-color: rgba(240,192,128,0.35);
         }
+
+        @media (max-width: 768px) {
+          .d4-nav { padding: 1rem 1.25rem !important; }
+          .d4-overview { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+          .d4-photos { grid-template-columns: 1fr !important; height: auto !important; }
+          .d4-photos > div { height: 240px; }
+          .d4-events { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+          .d4-pricing { align-items: stretch !important; }
+          .d4-section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+        }
       `}</style>
 
       <div style={{ background: '#1c0f05', color: '#fdf6ec', fontFamily: nunito.style.fontFamily, overflowX: 'hidden' }}>
@@ -155,7 +165,7 @@ export default function Design4() {
           background: 'rgba(28,15,5,0.88)',
           backdropFilter: 'blur(16px)',
           borderBottom: '1px solid rgba(240,192,128,0.07)',
-        }}>
+        }} className="d4-nav">
           <span style={{ fontFamily: lora.style.fontFamily, fontSize: '1.05rem', color: '#f0c080', letterSpacing: '0.06em' }}>
             Pacific Sauna
           </span>
@@ -247,8 +257,8 @@ export default function Design4() {
         </div>
 
         {/* ── Overview ──────────────────────────── */}
-        <section style={{ padding: '9rem 4rem', maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '6rem', alignItems: 'start' }}>
+        <section className="d4-section" style={{ padding: '9rem 4rem', maxWidth: '1100px', margin: '0 auto' }}>
+          <div className="d4-overview" style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '6rem', alignItems: 'start' }}>
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#c4723a', marginBottom: '1.5rem', opacity: 0.8 }}>Overview</p>
               <div style={{ width: '40px', height: '2px', background: 'linear-gradient(to right, #c4723a, #f0c080)', borderRadius: '1px', marginBottom: '2rem' }} />
@@ -321,7 +331,7 @@ export default function Design4() {
         </section>
 
         {/* ── Plunge Photo ──────────────────────── */}
-        <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '55vh', minHeight: '380px' }}>
+        <section className="d4-photos" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '55vh', minHeight: '380px' }}>
           <div style={{ backgroundImage: `url('${IMGS.plungeSocial}')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
             <div style={{ position: 'absolute', inset: 0, background: 'rgba(28,15,5,0.2)' }} />
           </div>
@@ -335,9 +345,9 @@ export default function Design4() {
         </div>
 
         {/* ── Private Events ────────────────────── */}
-        <section style={{ padding: '9rem 4rem' }}>
+        <section className="d4-section" style={{ padding: '9rem 4rem' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '6rem', alignItems: 'center' }}>
+            <div className="d4-events" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '6rem', alignItems: 'center' }}>
               <div>
                 <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#c4723a', marginBottom: '1.5rem', opacity: 0.8 }}>Private Events & Upper Deck</p>
                 <h2 style={{ fontFamily: lora.style.fontFamily, fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 700, color: '#fdf6ec', lineHeight: 1.1, marginBottom: '1.5rem' }}>
@@ -354,7 +364,7 @@ export default function Design4() {
               </div>
 
               {/* Pricing rings */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+              <div className="d4-pricing" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
                 <div className="price-ring">
                   <span style={{ fontFamily: lora.style.fontFamily, fontSize: '2.8rem', color: '#f0c080', fontWeight: 700, lineHeight: 1 }}>$250</span>
                   <span style={{ color: 'rgba(253,246,236,0.35)', fontSize: '0.72rem', textAlign: 'center', marginTop: '0.3rem' }}>Private · 2 guests</span>

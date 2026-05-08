@@ -125,6 +125,14 @@ export default function Design3() {
           height: 2px;
           background: linear-gradient(to right, #00c9b1, transparent);
         }
+
+        @media (max-width: 768px) {
+          .d3-nav { padding: 1rem 1.25rem !important; }
+          .d3-fixedbg { background-attachment: scroll !important; }
+          .d3-photos { grid-template-columns: 1fr !important; grid-template-rows: auto !important; }
+          .d3-photos > div { height: 220px; grid-row: auto !important; grid-column: auto !important; }
+          .d3-events { grid-template-columns: 1fr !important; gap: 3rem !important; }
+        }
       `}</style>
 
       <div style={{ background: '#060f1e', color: '#ffffff', fontFamily: anton.style.fontFamily, overflowX: 'hidden' }}>
@@ -137,7 +145,7 @@ export default function Design3() {
           background: 'rgba(6,15,30,0.9)',
           backdropFilter: 'blur(16px)',
           borderBottom: '1px solid rgba(0,201,177,0.08)',
-        }}>
+        }} className="d3-nav">
           <span style={{ fontSize: '1.1rem', letterSpacing: '0.12em', color: '#00c9b1' }}>PACIFIC SAUNA</span>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <Link href="/" style={{ color: 'rgba(255,255,255,0.25)', textDecoration: 'none', fontSize: '0.65rem', letterSpacing: '0.2em', fontFamily: sourceSerif.style.fontFamily }}>← DESIGNS</Link>
@@ -197,7 +205,7 @@ export default function Design3() {
         </section>
 
         {/* ── Cinematic Photo ───────────────── */}
-        <section style={{
+        <section className="d3-fixedbg" style={{
           height: '80vh', minHeight: '520px', position: 'relative', overflow: 'hidden',
           backgroundImage: `url('${IMGS.hero}')`,
           backgroundSize: 'cover', backgroundPosition: 'center 40%',
@@ -278,7 +286,7 @@ export default function Design3() {
         </section>
 
         {/* ── Photo Grid ────────────────────── */}
-        <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '280px 280px', gap: '3px' }}>
+        <section className="d3-photos" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '280px 280px', gap: '3px' }}>
           <div style={{ backgroundImage: `url('${IMGS.plungeSocial}')`, backgroundSize: 'cover', backgroundPosition: 'center', gridRow: '1 / 3' }} />
           <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
           <div style={{ backgroundImage: `url('${IMGS.deck}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
@@ -295,7 +303,7 @@ export default function Design3() {
         {/* ── Private Events ──────────────── */}
         <section style={{ padding: '9rem 5vw', background: 'rgba(0,201,177,0.02)' }}>
           <p className="tag-label" style={{ marginBottom: '2rem' }}>Private Events & Upper Deck</p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'start' }}>
+          <div className="d3-events" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'start' }}>
             <div>
               <h2 style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', lineHeight: 0.92, marginBottom: '2rem', letterSpacing: '-0.01em' }}>
                 HOST AN<br />

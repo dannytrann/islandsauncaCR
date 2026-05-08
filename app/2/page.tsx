@@ -116,6 +116,15 @@ export default function Design2() {
           padding: 1.2rem 0;
           border-bottom: 1px solid rgba(44,62,80,0.07);
         }
+
+        @media (max-width: 768px) {
+          .d2-nav { padding: 1rem 1.25rem !important; }
+          .d2-hero-panel { display: none !important; }
+          .d2-hero-fade { display: none !important; }
+          .d2-events { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .d2-photos { grid-template-columns: 1fr !important; height: auto !important; }
+          .d2-photos > div { height: 240px; }
+        }
       `}</style>
 
       <div style={{ background: '#f7f4ef', color: '#2c3e50', fontFamily: jakarta.style.fontFamily, overflowX: 'hidden' }}>
@@ -128,7 +137,7 @@ export default function Design2() {
           background: 'rgba(247,244,239,0.9)',
           backdropFilter: 'blur(16px)',
           borderBottom: '1px solid rgba(44,62,80,0.07)',
-        }}>
+        }} className="d2-nav">
           <span style={{ fontFamily: cormorant.style.fontFamily, fontSize: '1rem', color: '#2c3e50', letterSpacing: '0.12em', fontWeight: 500 }}>
             Pacific Sauna
           </span>
@@ -146,13 +155,13 @@ export default function Design2() {
           position: 'relative',
         }}>
           {/* Hero image — right side, clipped */}
-          <div style={{
+          <div className="d2-hero-panel" style={{
             position: 'absolute', top: 0, right: 0, width: '42%', bottom: 0,
             backgroundImage: `url('${IMGS.hero}')`,
             backgroundSize: 'cover', backgroundPosition: 'center',
             opacity: 0.18,
           }} />
-          <div style={{
+          <div className="d2-hero-fade" style={{
             position: 'absolute', top: 0, right: '42%', width: '15%', bottom: 0,
             background: 'linear-gradient(to right, #f7f4ef, transparent)',
           }} />
@@ -269,7 +278,7 @@ export default function Design2() {
           <div style={{ maxWidth: '900px' }}>
             <span className="accent-rule" />
             <p style={{ fontSize: '0.62rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: '#7fa9b8', marginBottom: '2rem' }}>Private Events</p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '8rem', alignItems: 'start' }}>
+            <div className="d2-events" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '8rem', alignItems: 'start' }}>
               <div>
                 <h2 style={{
                   fontFamily: cormorant.style.fontFamily,
@@ -339,7 +348,7 @@ export default function Design2() {
         </section>
 
         {/* ── Photo Moment ─────────────────────── */}
-        <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '60vh', minHeight: '400px' }}>
+        <section className="d2-photos" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '60vh', minHeight: '400px' }}>
           <div style={{ backgroundImage: `url('${IMGS.hero}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
           <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
         </section>

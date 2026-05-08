@@ -213,6 +213,15 @@ export default function Design5() {
           from { top: -1px; }
           to   { top: 100%; }
         }
+
+        @media (max-width: 768px) {
+          .d5-nav { padding: 1rem 1.25rem !important; }
+          .d5-gallery { flex-wrap: wrap !important; height: auto !important; }
+          .d5-gallery > div { flex: 0 0 50% !important; height: 180px; min-width: 0 !important; }
+          .d5-events { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .diagonal-section { clip-path: none !important; margin: 0 !important; padding: 5rem 1.5rem !important; }
+          .diagonal-section-alt { clip-path: none !important; margin: 0 !important; padding: 5rem 1.5rem !important; }
+        }
       `}</style>
 
       <div style={{ background: '#070d14', color: '#ffffff', fontFamily: barlow.style.fontFamily, overflowX: 'hidden', position: 'relative' }}>
@@ -236,7 +245,7 @@ export default function Design5() {
             background: 'rgba(7,13,20,0.85)',
             backdropFilter: 'blur(20px)',
             borderBottom: '1px solid rgba(0,229,204,0.08)',
-          }}>
+          }} className="d5-nav">
             <span style={{ fontFamily: bebas.style.fontFamily, fontSize: '1.2rem', letterSpacing: '0.12em', color: '#00e5cc' }}>
               PACIFIC SAUNA
             </span>
@@ -345,7 +354,7 @@ export default function Design5() {
           </section>
 
           {/* ── Gallery Strip ─────────────────────── */}
-          <section style={{ display: 'flex', height: '320px', overflow: 'hidden' }}>
+          <section className="d5-gallery" style={{ display: 'flex', height: '320px', overflow: 'hidden' }}>
             {[IMGS.hero, IMGS.interior, IMGS.plungeSocial, IMGS.deck, IMGS.plungeAerial].map((src, i) => (
               <div key={i} style={{
                 flex: 1, backgroundImage: `url('${src}')`,
@@ -396,7 +405,7 @@ export default function Design5() {
           <section className="diagonal-section" style={{ background: 'rgba(124,58,237,0.06)' }}>
             <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.45em', color: '#8b5cf6', marginBottom: '2rem', opacity: 0.75, textTransform: 'uppercase' }}>03 — Private Events & Upper Deck</p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
+              <div className="d5-events" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
                 <div>
                   <h2 style={{
                     fontFamily: bebas.style.fontFamily,
