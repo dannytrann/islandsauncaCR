@@ -421,16 +421,59 @@ export default function Home() {
 
         /* Responsive */
         @media (max-width: 768px) {
+          /* Nav */
           .d4-nav { padding: 1rem 1.25rem !important; }
-          .d4-overview { grid-template-columns: 1fr !important; gap: 3rem !important; }
-          .d4-photos { grid-template-columns: 1fr !important; height: auto !important; }
-          .d4-photos > div { height: 260px; }
-          .d4-events { grid-template-columns: 1fr !important; gap: 3rem !important; }
-          .d4-sessions { flex-direction: column !important; }
-          .d4-callouts { grid-template-columns: 1fr !important; }
-          .d4-section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
-          .divider { margin: 0 1.5rem !important; }
           .comox-link { display: none; }
+
+          /* Universal horizontal padding for all sections */
+          section { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+          .d4-section { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+          .divider { margin: 0 1.25rem !important; }
+
+          /* Reduce tall vertical padding on sections */
+          .d4-cta { padding-top: 6rem !important; padding-bottom: 6rem !important; }
+
+          /* Grids that need to stack */
+          .d4-overview { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+          .d4-events { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+          .d4-callouts { grid-template-columns: 1fr !important; }
+
+          /* Photo diptych stacks */
+          .d4-photos { grid-template-columns: 1fr !important; height: auto !important; }
+          .d4-photos > div { height: 240px; }
+
+          /* Session cards stack + space for floating badge */
+          .d4-sessions { flex-direction: column !important; padding-top: 1rem !important; }
+
+          /* Full-width CTAs — easier to tap */
+          .book-btn {
+            width: 100% !important;
+            text-align: center !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+          }
+          .session-cta-outline, .session-cta-filled {
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
+          }
+
+          /* FAQ inner padding */
+          .d4-faq-box { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+          /* Footer stacks vertically */
+          .d4-footer {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            padding: 2rem 1.25rem !important;
+            gap: 1.5rem !important;
+          }
+          .d4-footer-links {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.6rem !important;
+            width: 100% !important;
+          }
         }
       `}</style>
 
@@ -829,7 +872,7 @@ export default function Home() {
                 Common <em style={{ color: '#D97016' }}>questions.</em>
               </h2>
             </div>
-            <div style={{ borderRadius: '20px', border: '1px solid rgba(245,166,35,0.09)', padding: '0 2.5rem', background: 'rgba(253,246,236,0.015)' }}>
+            <div className="d4-faq-box" style={{ borderRadius: '20px', border: '1px solid rgba(245,166,35,0.09)', padding: '0 2.5rem', background: 'rgba(253,246,236,0.015)' }}>
               {faqs.map((faq) => (
                 <details key={faq.q} className="faq-item">
                   <summary>
@@ -843,7 +886,7 @@ export default function Home() {
         </section>
 
         {/* ── CTA ───────────────────────────────── */}
-        <section style={{
+        <section className="d4-cta" style={{
           padding: '11rem 4rem',
           background: 'radial-gradient(ellipse at center bottom, rgba(217,112,22,0.28) 0%, rgba(15,29,60,0.65) 50%, #0C1A32 100%)',
           textAlign: 'center',
@@ -878,7 +921,7 @@ export default function Home() {
         </section>
 
         {/* ── Footer ─────────────────────────────── */}
-        <footer style={{
+        <footer className="d4-footer" style={{
           padding: '3rem 4rem',
           borderTop: '1px solid rgba(245,166,35,0.08)',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem',
@@ -891,7 +934,7 @@ export default function Home() {
               Coast Marina · Campbell River, BC
             </p>
           </div>
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <div className="d4-footer-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <a href="tel:2505041095" style={{ color: 'rgba(253,246,236,0.3)', textDecoration: 'none', fontSize: '0.78rem', transition: 'color 0.2s' }}>
               250-504-1095
             </a>

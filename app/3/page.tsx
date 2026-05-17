@@ -26,7 +26,7 @@ export default function Design3() {
         }
         @keyframes tealFlash {
           0%, 100% { color: #ffffff; }
-          50%       { color: #00c9b1; }
+          50%       { color: #29A8C5; }
         }
         @keyframes numberReveal {
           from { opacity: 0; transform: translateX(-20px); }
@@ -42,7 +42,7 @@ export default function Design3() {
           display: block;
           overflow: hidden;
         }
-        .big-word-teal { color: #00c9b1 !important; }
+        .big-word-teal { color: #29A8C5 !important; }
 
         .hero-line-1 { animation: slideRight 1s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
         .hero-line-2 { animation: slideRight 1s cubic-bezier(0.16,1,0.3,1) 0.25s both; }
@@ -54,7 +54,7 @@ export default function Design3() {
           position: absolute;
           font-size: clamp(7rem, 20vw, 18rem);
           font-weight: 400;
-          color: #00c9b1;
+          color: #29A8C5;
           line-height: 1;
           user-select: none;
           pointer-events: none;
@@ -66,18 +66,18 @@ export default function Design3() {
         }
 
         .experience-block {
-          border-left: 2px solid rgba(0,201,177,0.2);
+          border-left: 2px solid rgba(41,168,197,0.2);
           padding-left: 2.5rem;
           margin-bottom: 3.5rem;
           transition: border-color 0.3s ease;
         }
-        .experience-block:hover { border-left-color: #00c9b1; }
+        .experience-block:hover { border-left-color: #29A8C5; }
 
         .book-btn-3 {
           display: inline-block;
           text-decoration: none;
-          background: #00c9b1;
-          color: #060f1e;
+          background: #F5A623;
+          color: #071525;
           font-size: 0.75rem;
           letter-spacing: 0.28em;
           text-transform: uppercase;
@@ -86,20 +86,20 @@ export default function Design3() {
           transition: background 0.25s ease, transform 0.2s ease;
           font-family: inherit;
         }
-        .book-btn-3:hover { background: #00e5cc; transform: translateY(-3px); }
+        .book-btn-3:hover { background: #FFBE45; transform: translateY(-3px); }
 
         .tag-label {
           font-size: 0.65rem;
           letter-spacing: 0.42em;
           text-transform: uppercase;
-          color: #00c9b1;
+          color: #29A8C5;
           opacity: 0.75;
         }
 
         .event-pill {
           display: inline-block;
           padding: 0.5rem 1.25rem;
-          border: 1px solid rgba(0,201,177,0.2);
+          border: 1px solid rgba(41,168,197,0.2);
           color: rgba(255,255,255,0.5);
           font-size: 0.8rem;
           letter-spacing: 0.08em;
@@ -107,23 +107,23 @@ export default function Design3() {
           transition: border-color 0.2s, color 0.2s, background 0.2s;
         }
         .event-pill:hover {
-          border-color: #00c9b1;
-          color: #00c9b1;
-          background: rgba(0,201,177,0.05);
+          border-color: #29A8C5;
+          color: #29A8C5;
+          background: rgba(41,168,197,0.05);
         }
 
         .price-display {
-          border: 1px solid rgba(0,201,177,0.15);
+          border: 1px solid rgba(41,168,197,0.15);
           padding: 3rem;
           position: relative;
-          background: rgba(0,201,177,0.02);
+          background: rgba(41,168,197,0.02);
         }
         .price-display::before {
           content: '';
           position: absolute;
           top: 0; left: 0; right: 0;
           height: 2px;
-          background: linear-gradient(to right, #00c9b1, transparent);
+          background: linear-gradient(to right, #29A8C5, transparent);
         }
 
         @media (max-width: 768px) {
@@ -135,24 +135,24 @@ export default function Design3() {
         }
       `}</style>
 
-      <div style={{ background: '#060f1e', color: '#ffffff', fontFamily: anton.style.fontFamily, overflowX: 'hidden' }}>
+      <div style={{ background: '#071525', color: '#ffffff', fontFamily: anton.style.fontFamily, overflowX: 'hidden' }}>
 
         {/* ── Nav ─────────────────────────────── */}
         <nav style={{
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
           padding: '1.3rem 3rem',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          background: 'rgba(6,15,30,0.9)',
+          background: 'rgba(7,21,37,0.9)',
           backdropFilter: 'blur(16px)',
-          borderBottom: '1px solid rgba(0,201,177,0.08)',
+          borderBottom: '1px solid rgba(41,168,197,0.08)',
         }} className="d3-nav">
-          <span style={{ fontSize: '1.1rem', letterSpacing: '0.12em', color: '#00c9b1' }}>PACIFIC SAUNA</span>
+          <span style={{ fontSize: '1.1rem', letterSpacing: '0.12em', color: '#29A8C5' }}>PACIFIC SAUNA</span>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <Link href="/" style={{ color: 'rgba(255,255,255,0.25)', textDecoration: 'none', fontSize: '0.65rem', letterSpacing: '0.2em', fontFamily: sourceSerif.style.fontFamily }}>← DESIGNS</Link>
             <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" style={{
-              color: '#00c9b1', textDecoration: 'none', fontSize: '0.65rem',
+              color: '#29A8C5', textDecoration: 'none', fontSize: '0.65rem',
               letterSpacing: '0.25em', textTransform: 'uppercase',
-              border: '1px solid rgba(0,201,177,0.35)', padding: '0.45rem 1.3rem',
+              border: '1px solid rgba(41,168,197,0.35)', padding: '0.45rem 1.3rem',
               fontFamily: sourceSerif.style.fontFamily, fontWeight: 600,
             }}>Book →</a>
           </div>
@@ -168,7 +168,7 @@ export default function Design3() {
           {/* Background gradient */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse 100% 80% at 100% 0%, rgba(0,201,177,0.07) 0%, transparent 55%)',
+            background: 'radial-gradient(ellipse 100% 80% at 100% 0%, rgba(41,168,197,0.07) 0%, transparent 55%)',
             pointerEvents: 'none',
           }} />
 
@@ -188,13 +188,13 @@ export default function Design3() {
           <div className="hero-info" style={{
             display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end',
             paddingTop: '4rem', flexWrap: 'wrap', gap: '2rem',
-            borderTop: '1px solid rgba(0,201,177,0.12)', marginTop: '2rem',
+            borderTop: '1px solid rgba(41,168,197,0.12)', marginTop: '2rem',
           }}>
             <div>
               <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.4)', fontSize: '0.88rem', fontWeight: 300, lineHeight: 1.7 }}>
                 West Coast sauna. Pacific Ocean cold plunge.<br />Gather, reset, or celebrate.
               </p>
-              <p style={{ color: 'rgba(0,201,177,0.5)', fontSize: '0.62rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginTop: '0.75rem', fontFamily: sourceSerif.style.fontFamily }}>
+              <p style={{ color: 'rgba(41,168,197,0.5)', fontSize: '0.62rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginTop: '0.75rem', fontFamily: sourceSerif.style.fontFamily }}>
                 Campbell River · British Columbia
               </p>
             </div>
@@ -211,8 +211,8 @@ export default function Design3() {
           backgroundSize: 'cover', backgroundPosition: 'center 40%',
           backgroundAttachment: 'fixed',
         }}>
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,15,30,0.55)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #060f1e 0%, transparent 20%, transparent 80%, #060f1e 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(7,21,37,0.55)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #071525 0%, transparent 20%, transparent 80%, #071525 100%)' }} />
           <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', alignItems: 'center', padding: '0 5vw' }}>
             <p style={{
               fontFamily: sourceSerif.style.fontFamily,
@@ -220,7 +220,7 @@ export default function Design3() {
               color: 'rgba(255,255,255,0.75)',
               fontStyle: 'italic', fontWeight: 300,
               maxWidth: '560px', lineHeight: 1.6,
-              borderLeft: '2px solid #00c9b1', paddingLeft: '2rem',
+              borderLeft: '2px solid #29A8C5', paddingLeft: '2rem',
             }}>
               "A floating sauna and ocean plunge experience designed for deep relaxation, connection, and unforgettable moments on the coast."
             </p>
@@ -228,9 +228,9 @@ export default function Design3() {
         </section>
 
         {/* ── Wave ──────────────────────────── */}
-        <div style={{ overflow: 'hidden', lineHeight: 0, background: '#060f1e' }}>
+        <div style={{ overflow: 'hidden', lineHeight: 0, background: '#071525' }}>
           <svg viewBox="0 0 1440 60" style={{ width: '100%', display: 'block' }} preserveAspectRatio="none">
-            <path className="wave-svg" d="M0,30 C160,50 320,10 480,30 C640,50 800,10 960,30 C1120,50 1280,10 1440,30 L1440,60 L0,60 Z" fill="rgba(0,201,177,0.06)" />
+            <path className="wave-svg" d="M0,30 C160,50 320,10 480,30 C640,50 800,10 960,30 C1120,50 1280,10 1440,30 L1440,60 L0,60 Z" fill="rgba(41,168,197,0.06)" />
           </svg>
         </div>
 
@@ -241,7 +241,7 @@ export default function Design3() {
             <p className="tag-label" style={{ marginBottom: '2rem' }}>Overview</p>
             <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 4.5rem)', lineHeight: 0.95, marginBottom: '3rem', letterSpacing: '-0.01em' }}>
               ROOTED IN SCANDINAVIAN<br />
-              <span style={{ color: '#00c9b1' }}>BATHING TRADITION</span><br />
+              <span style={{ color: '#29A8C5' }}>BATHING TRADITION</span><br />
               SHAPED BY THE PACIFIC
             </h2>
             <p style={{
@@ -257,7 +257,7 @@ export default function Design3() {
           </div>
         </section>
 
-        <div style={{ height: '1px', background: 'linear-gradient(to right, rgba(0,201,177,0.15), transparent)', margin: '0 5vw' }} />
+        <div style={{ height: '1px', background: 'linear-gradient(to right, rgba(41,168,197,0.15), transparent)', margin: '0 5vw' }} />
 
         {/* ── Experience ──────────────────── */}
         <section style={{ padding: '9rem 5vw', position: 'relative' }}>
@@ -266,17 +266,17 @@ export default function Design3() {
             <p className="tag-label" style={{ marginBottom: '2rem' }}>The Experience</p>
             <h2 style={{ fontSize: 'clamp(2rem, 6vw, 5.5rem)', lineHeight: 0.92, marginBottom: '5rem', letterSpacing: '-0.01em' }}>
               HEAT. COLD.<br />
-              <span style={{ color: '#00c9b1' }}>REST. REPEAT.</span>
+              <span style={{ color: '#29A8C5' }}>REST. REPEAT.</span>
             </h2>
             {[
-              { num: '01', title: 'Traditional Sauna', desc: 'Dry heat. Softens the body. Inspired by Scandinavian bathing culture perfected over centuries.' },
+              { num: '01', title: 'Traditional Sauna', desc: '80 – 100°C, dialed to your group. Softens the body. Inspired by Scandinavian bathing culture perfected over centuries.' },
               { num: '02', title: 'Ocean Cold Plunge', desc: 'Pacific waters. Raw and clarifying. Sharpens the mind, invigorates every cell.' },
-              { num: '03', title: 'Upper Deck Lounging', desc: 'Open air over the water. Ocean views, coastal wind, between-round stillness.' },
-              { num: '04', title: 'Quiet Gathering', desc: 'Intimate space to come together — or to arrive alone and simply be.' },
+              { num: '03', title: 'Upper Deck Lounging', desc: 'Cold drinks, great company, endless ocean views. Where the energy picks up between rounds and the vibe stays effortlessly chill.' },
+              { num: '04', title: 'Quiet Gathering', desc: 'Intimate space to come together, or to arrive alone and simply be.' },
             ].map((item) => (
               <div key={item.num} className="experience-block">
                 <div style={{ display: 'flex', gap: '2rem', alignItems: 'baseline', marginBottom: '0.75rem' }}>
-                  <span style={{ color: '#00c9b1', fontSize: '0.7rem', letterSpacing: '0.15em', fontFamily: sourceSerif.style.fontFamily, opacity: 0.6 }}>{item.num}</span>
+                  <span style={{ color: '#29A8C5', fontSize: '0.7rem', letterSpacing: '0.15em', fontFamily: sourceSerif.style.fontFamily, opacity: 0.6 }}>{item.num}</span>
                   <h3 style={{ fontSize: 'clamp(1.2rem, 3vw, 2rem)', letterSpacing: '0.02em' }}>{item.title.toUpperCase()}</h3>
                 </div>
                 <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.4)', fontSize: '0.92rem', lineHeight: 1.85, fontWeight: 300 }}>{item.desc}</p>
@@ -296,18 +296,18 @@ export default function Design3() {
         {/* ── Wave ─────────────────────────── */}
         <div style={{ overflow: 'hidden', lineHeight: 0 }}>
           <svg viewBox="0 0 1440 60" style={{ width: '100%', display: 'block', transform: 'scaleY(-1)' }} preserveAspectRatio="none">
-            <path d="M0,30 C160,50 320,10 480,30 C640,50 800,10 960,30 C1120,50 1280,10 1440,30 L1440,60 L0,60 Z" fill="rgba(0,201,177,0.04)" />
+            <path d="M0,30 C160,50 320,10 480,30 C640,50 800,10 960,30 C1120,50 1280,10 1440,30 L1440,60 L0,60 Z" fill="rgba(41,168,197,0.04)" />
           </svg>
         </div>
 
         {/* ── Private Events ──────────────── */}
-        <section style={{ padding: '9rem 5vw', background: 'rgba(0,201,177,0.02)' }}>
+        <section style={{ padding: '9rem 5vw', background: 'rgba(41,168,197,0.02)' }}>
           <p className="tag-label" style={{ marginBottom: '2rem' }}>Private Events & Upper Deck</p>
           <div className="d3-events" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'start' }}>
             <div>
               <h2 style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', lineHeight: 0.92, marginBottom: '2rem', letterSpacing: '-0.01em' }}>
                 HOST AN<br />
-                <span style={{ color: '#00c9b1' }}>ELEVATED</span><br />
+                <span style={{ color: '#29A8C5' }}>ELEVATED</span><br />
                 EXPERIENCE
               </h2>
               <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.4)', fontSize: '0.92rem', lineHeight: 2, fontWeight: 300, marginBottom: '2.5rem' }}>
@@ -324,15 +324,15 @@ export default function Design3() {
               <div className="price-display">
                 <p className="tag-label" style={{ marginBottom: '1.5rem' }}>Pricing</p>
                 <div style={{ marginBottom: '2rem' }}>
-                  <span style={{ fontSize: 'clamp(3rem, 7vw, 5rem)', color: '#00c9b1', lineHeight: 1 }}>$250</span>
-                  <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.35)', fontSize: '0.82rem', marginTop: '0.5rem', fontWeight: 300 }}>Private session — first 2 guests</p>
+                  <span style={{ fontSize: 'clamp(3rem, 7vw, 5rem)', color: '#29A8C5', lineHeight: 1 }}>$250</span>
+                  <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.35)', fontSize: '0.82rem', marginTop: '0.5rem', fontWeight: 300 }}>Private session, first 2 guests</p>
                 </div>
-                <div style={{ height: '1px', background: 'rgba(0,201,177,0.12)', marginBottom: '2rem' }} />
+                <div style={{ height: '1px', background: 'rgba(41,168,197,0.12)', marginBottom: '2rem' }} />
                 <div style={{ marginBottom: '2rem' }}>
                   <span style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', color: 'rgba(255,255,255,0.6)', lineHeight: 1 }}>+$30</span>
                   <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.35)', fontSize: '0.82rem', marginTop: '0.5rem', fontWeight: 300 }}>each additional guest</p>
                 </div>
-                <div style={{ height: '1px', background: 'rgba(0,201,177,0.12)', marginBottom: '2rem' }} />
+                <div style={{ height: '1px', background: 'rgba(41,168,197,0.12)', marginBottom: '2rem' }} />
                 <div>
                   <span style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1 }}>$42.50</span>
                   <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.35)', fontSize: '0.82rem', marginTop: '0.5rem', fontWeight: 300 }}>per person · drop-in session</p>
@@ -346,35 +346,35 @@ export default function Design3() {
         <section style={{ padding: '9rem 5vw' }}>
           <p className="tag-label" style={{ marginBottom: '2rem' }}>Drinks & Add-Ons</p>
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: 0.92, marginBottom: '4rem', letterSpacing: '-0.01em' }}>
-            SIMPLE.<br /><span style={{ color: '#00c9b1' }}>CLEAN.</span><br />INTENTIONAL.
+            SIMPLE.<br /><span style={{ color: '#29A8C5' }}>CLEAN.</span><br />INTENTIONAL.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1px', background: 'rgba(0,201,177,0.08)', maxWidth: '700px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1px', background: 'rgba(41,168,197,0.08)', maxWidth: '700px' }}>
             {[
               { name: 'Cultured Kombucha', price: '$7.00' },
               { name: 'Glacier Water', price: '$5.00' },
               { name: 'House Red Wine', price: 'TBD' },
               { name: 'House White Wine', price: 'TBD' },
             ].map((d) => (
-              <div key={d.name} style={{ background: '#060f1e', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <div key={d.name} style={{ background: '#071525', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <span style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.45)', fontSize: '0.88rem', fontWeight: 300 }}>{d.name}</span>
-                <span style={{ fontSize: '1.4rem', color: '#00c9b1', lineHeight: 1 }}>{d.price}</span>
+                <span style={{ fontSize: '1.4rem', color: '#29A8C5', lineHeight: 1 }}>{d.price}</span>
               </div>
             ))}
           </div>
         </section>
 
         {/* ── CTA ────────────────────────── */}
-        <section style={{ padding: '10rem 5vw', borderTop: '1px solid rgba(0,201,177,0.1)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: '10rem 5vw', borderTop: '1px solid rgba(41,168,197,0.1)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse 70% 80% at 50% 100%, rgba(0,201,177,0.08) 0%, transparent 65%)',
+            background: 'radial-gradient(ellipse 70% 80% at 50% 100%, rgba(41,168,197,0.08) 0%, transparent 65%)',
             pointerEvents: 'none',
           }} />
           <div style={{ position: 'relative', zIndex: 1 }}>
             <p className="tag-label" style={{ marginBottom: '2rem' }}>Book Your Session</p>
             <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 7rem)', lineHeight: 0.9, marginBottom: '3.5rem', maxWidth: '900px' }}>
               CHOOSE YOUR<br />SESSION.<br />
-              <span style={{ color: '#00c9b1' }}>GATHER YOUR PEOPLE.</span>
+              <span style={{ color: '#29A8C5' }}>GATHER YOUR PEOPLE.</span>
             </h2>
             <p style={{ fontFamily: sourceSerif.style.fontFamily, color: 'rgba(255,255,255,0.35)', fontSize: '0.95rem', lineHeight: 2, fontWeight: 300, maxWidth: '480px', marginBottom: '4rem' }}>
               Whether you are seeking stillness or celebration, Pacific Sauna & Ocean Plunge
@@ -386,7 +386,7 @@ export default function Design3() {
           </div>
         </section>
 
-        <footer style={{ padding: '2.5rem 5vw', borderTop: '1px solid rgba(0,201,177,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        <footer style={{ padding: '2.5rem 5vw', borderTop: '1px solid rgba(41,168,197,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <p style={{ color: 'rgba(255,255,255,0.18)', fontSize: '0.68rem', letterSpacing: '0.2em' }}>
             PACIFIC SAUNA & OCEAN PLUNGE · CAMPBELL RIVER, BC
           </p>
