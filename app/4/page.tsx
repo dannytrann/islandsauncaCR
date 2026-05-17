@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import { Lora, Nunito_Sans } from 'next/font/google'
-import { IMGS } from '@/lib/images'
 
 const lora = Lora({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal', 'italic'], display: 'swap' })
 const nunito = Nunito_Sans({ subsets: ['latin'], weight: ['300', '400', '600'], display: 'swap' })
@@ -31,8 +29,8 @@ export default function Design4() {
           75%  { opacity: 0.8; }
         }
         @keyframes warmGlow {
-          0%, 100% { box-shadow: 0 0 30px 8px rgba(196,114,58,0.35), inset 0 0 40px rgba(200,100,20,0.2); }
-          50%       { box-shadow: 0 0 60px 18px rgba(196,114,58,0.5), inset 0 0 60px rgba(200,100,20,0.3); }
+          0%, 100% { box-shadow: 0 0 30px 8px rgba(217,112,22,0.35), inset 0 0 40px rgba(200,100,20,0.2); }
+          50%       { box-shadow: 0 0 60px 18px rgba(217,112,22,0.5), inset 0 0 60px rgba(200,100,20,0.3); }
         }
         @keyframes float {
           0%, 100% { transform: translateY(0); }
@@ -50,7 +48,7 @@ export default function Design4() {
         .wisp {
           position: absolute;
           border-radius: 50% 50% 40% 60%;
-          background: radial-gradient(ellipse, rgba(255,200,120,0.5) 0%, rgba(196,114,58,0.2) 50%, transparent 80%);
+          background: radial-gradient(ellipse, rgba(255,200,120,0.5) 0%, rgba(217,112,22,0.2) 50%, transparent 80%);
           animation: wispRise ease-in-out infinite;
           bottom: 0;
           filter: blur(3px);
@@ -58,21 +56,21 @@ export default function Design4() {
 
         .warm-card {
           background: rgba(253,246,236,0.06);
-          border: 1px solid rgba(240,192,128,0.15);
+          border: 1px solid rgba(245,166,35,0.15);
           border-radius: 20px;
           padding: 2.5rem;
           transition: background 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
         }
         .warm-card:hover {
           background: rgba(253,246,236,0.1);
-          border-color: rgba(240,192,128,0.3);
+          border-color: rgba(245,166,35,0.3);
           transform: translateY(-4px);
         }
 
         .book-btn-4 {
           display: inline-block;
           text-decoration: none;
-          background: linear-gradient(135deg, #c4723a, #e09a35);
+          background: linear-gradient(135deg, #D97016, #F5A623);
           color: #fdf6ec;
           border-radius: 50px;
           font-size: 0.78rem;
@@ -85,7 +83,7 @@ export default function Design4() {
         }
         .book-btn-4:hover {
           transform: translateY(-3px);
-          box-shadow: 0 12px 30px rgba(196,114,58,0.5);
+          box-shadow: 0 12px 30px rgba(217,112,22,0.5);
         }
 
         .divider-warm {
@@ -99,10 +97,10 @@ export default function Design4() {
           content: '';
           flex: 1;
           height: 1px;
-          background: rgba(240,192,128,0.2);
+          background: rgba(245,166,35,0.2);
         }
         .divider-warm-icon {
-          color: rgba(240,192,128,0.4);
+          color: rgba(245,166,35,0.4);
           font-size: 0.7rem;
         }
 
@@ -110,13 +108,13 @@ export default function Design4() {
           width: 180px;
           height: 180px;
           border-radius: 50%;
-          border: 2px solid rgba(240,192,128,0.25);
+          border: 2px solid rgba(245,166,35,0.25);
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           animation: float 5s ease-in-out infinite;
-          background: radial-gradient(circle, rgba(196,114,58,0.1) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(217,112,22,0.1) 0%, transparent 70%);
         }
 
         .menu-item {
@@ -124,14 +122,14 @@ export default function Design4() {
           justify-content: space-between;
           align-items: baseline;
           padding: 1.25rem 0;
-          border-bottom: 1px solid rgba(240,192,128,0.12);
+          border-bottom: 1px solid rgba(245,166,35,0.12);
         }
 
         .event-tag {
           display: inline-block;
           padding: 0.45rem 1.1rem;
-          background: rgba(240,192,128,0.08);
-          border: 1px solid rgba(240,192,128,0.15);
+          background: rgba(245,166,35,0.08);
+          border: 1px solid rgba(245,166,35,0.15);
           border-radius: 100px;
           color: rgba(253,246,236,0.55);
           font-size: 0.8rem;
@@ -139,9 +137,9 @@ export default function Design4() {
           transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
         }
         .event-tag:hover {
-          background: rgba(240,192,128,0.15);
-          color: #f0c080;
-          border-color: rgba(240,192,128,0.35);
+          background: rgba(245,166,35,0.15);
+          color: #F5A623;
+          border-color: rgba(245,166,35,0.35);
         }
 
         @media (max-width: 768px) {
@@ -155,26 +153,25 @@ export default function Design4() {
         }
       `}</style>
 
-      <div style={{ background: '#1c0f05', color: '#fdf6ec', fontFamily: nunito.style.fontFamily, overflowX: 'hidden' }}>
+      <div style={{ background: '#0C1A32', color: '#fdf6ec', fontFamily: nunito.style.fontFamily, overflowX: 'hidden' }}>
 
         {/* ── Nav ─────────────────────────────────── */}
         <nav style={{
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
           padding: '1.4rem 3rem',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          background: 'rgba(28,15,5,0.88)',
+          background: 'rgba(12,26,50,0.88)',
           backdropFilter: 'blur(16px)',
-          borderBottom: '1px solid rgba(240,192,128,0.07)',
+          borderBottom: '1px solid rgba(245,166,35,0.07)',
         }} className="d4-nav">
-          <span style={{ fontFamily: lora.style.fontFamily, fontSize: '1.05rem', color: '#f0c080', letterSpacing: '0.06em' }}>
+          <span style={{ fontFamily: lora.style.fontFamily, fontSize: '1.05rem', color: '#F5A623', letterSpacing: '0.06em' }}>
             Pacific Sauna
           </span>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            <Link href="/" style={{ color: 'rgba(240,192,128,0.3)', textDecoration: 'none', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>← Designs</Link>
             <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" style={{
-              color: '#f0c080', textDecoration: 'none', fontSize: '0.7rem',
+              color: '#F5A623', textDecoration: 'none', fontSize: '0.7rem',
               letterSpacing: '0.2em', textTransform: 'uppercase',
-              border: '1px solid rgba(240,192,128,0.3)', borderRadius: '100px',
+              border: '1px solid rgba(245,166,35,0.3)', borderRadius: '100px',
               padding: '0.45rem 1.3rem',
             }}>
               Book
@@ -185,19 +182,19 @@ export default function Design4() {
         {/* ── Hero ────────────────────────────────── */}
         <section style={{
           minHeight: '100vh',
-          backgroundImage: `url('${IMGS.hero}')`,
+          backgroundImage: `url('/photos/CR-Sauna_038.jpg')`,
           backgroundSize: 'cover', backgroundPosition: 'center 45%',
           display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
           textAlign: 'center', padding: '8rem 2rem 5rem',
           position: 'relative', overflow: 'hidden',
         }}>
           {/* Warm dark overlay */}
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(20,8,2,0.72)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,12,28,0.75)' }} />
           {/* Warm gradient bloom */}
           <div style={{
             position: 'absolute', bottom: '-10%', left: '50%', transform: 'translateX(-50%)',
             width: '80%', height: '60%',
-            background: 'radial-gradient(ellipse, rgba(196,114,58,0.25) 0%, rgba(140,60,20,0.1) 40%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(217,112,22,0.25) 0%, rgba(140,60,20,0.1) 40%, transparent 70%)',
             filter: 'blur(40px)', pointerEvents: 'none',
             animation: 'emberFlicker 5s ease-in-out infinite',
           }} />
@@ -213,7 +210,7 @@ export default function Design4() {
           </div>
 
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.65rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: 'rgba(240,192,128,0.6)', marginBottom: '2.5rem' }}>
+            <p style={{ fontSize: '0.65rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: 'rgba(245,166,35,0.6)', marginBottom: '2.5rem' }}>
               Campbell River · British Columbia
             </p>
             <h1 className="hero-h1" style={{
@@ -232,7 +229,7 @@ export default function Design4() {
               fontSize: 'clamp(1.4rem, 4vw, 3.5rem)',
               fontWeight: 400,
               fontStyle: 'italic',
-              color: '#c4723a',
+              color: '#D97016',
               marginBottom: '2rem',
               lineHeight: 1.2,
             }}>
@@ -260,9 +257,9 @@ export default function Design4() {
         <section className="d4-section" style={{ padding: '9rem 4rem', maxWidth: '1100px', margin: '0 auto' }}>
           <div className="d4-overview" style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '6rem', alignItems: 'start' }}>
             <div>
-              <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#c4723a', marginBottom: '1.5rem', opacity: 0.8 }}>Overview</p>
-              <div style={{ width: '40px', height: '2px', background: 'linear-gradient(to right, #c4723a, #f0c080)', borderRadius: '1px', marginBottom: '2rem' }} />
-              <p style={{ fontFamily: lora.style.fontFamily, fontSize: '1.25rem', color: '#f0c080', fontStyle: 'italic', lineHeight: 1.7 }}>
+              <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#D97016', marginBottom: '1.5rem', opacity: 0.8 }}>Overview</p>
+              <div style={{ width: '40px', height: '2px', background: 'linear-gradient(to right, #D97016, #F5A623)', borderRadius: '1px', marginBottom: '2rem' }} />
+              <p style={{ fontFamily: lora.style.fontFamily, fontSize: '1.25rem', color: '#F5A623', fontStyle: 'italic', lineHeight: 1.7 }}>
                 "Warm up, cool down, and come together."
               </p>
             </div>
@@ -292,24 +289,24 @@ export default function Design4() {
         <section style={{ padding: '9rem 4rem' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-              <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#c4723a', marginBottom: '1.5rem', opacity: 0.8 }}>The Experience</p>
+              <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#D97016', marginBottom: '1.5rem', opacity: 0.8 }}>The Experience</p>
               <h2 style={{
                 fontFamily: lora.style.fontFamily,
                 fontSize: 'clamp(2rem, 5vw, 4.5rem)',
                 fontWeight: 700, color: '#fdf6ec', lineHeight: 1.05,
               }}>
-                Heat. Cold. Rest. <em style={{ color: '#c4723a' }}>Repeat.</em>
+                Heat. Cold. Rest. <em style={{ color: '#D97016' }}>Repeat.</em>
               </h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
               {[
-                { icon: '♨', title: 'Traditional Sauna', desc: 'Dry heat up to 80°C. Softens the body and quiets the mind in the Scandinavian tradition.' },
+                { icon: '♨', title: 'Traditional Sauna', desc: 'Heated to 80 – 100°C, dialed to your group. Softens the body and quiets the mind in the Scandinavian tradition.' },
                 { icon: '〰', title: 'Ocean Cold Plunge', desc: 'Pacific waters. Bracing, clarifying, and invigorating. The perfect contrast to the heat.' },
-                { icon: '◇', title: 'Upper Deck', desc: 'Open air over the water. Breathe the ocean air between rounds of heat and cold.' },
+                { icon: '◇', title: 'Upper Deck', desc: 'Cold drinks, your crew, and ocean views as far as you can see. Equal parts lively and laid-back, the perfect place to land between rounds.' },
                 { icon: '○', title: 'Quiet Gathering', desc: 'Intimate coastal space for connection, celebration, wellness, or peaceful solitude.' },
               ].map((item) => (
                 <div key={item.title} className="warm-card">
-                  <span style={{ fontSize: '2rem', display: 'block', marginBottom: '1.2rem', opacity: 0.5, color: '#f0c080' }}>{item.icon}</span>
+                  <span style={{ fontSize: '2rem', display: 'block', marginBottom: '1.2rem', opacity: 0.5, color: '#F5A623' }}>{item.icon}</span>
                   <h3 style={{ fontFamily: lora.style.fontFamily, fontSize: '1.15rem', fontWeight: 600, color: '#fdf6ec', marginBottom: '0.75rem' }}>{item.title}</h3>
                   <p style={{ color: 'rgba(253,246,236,0.4)', lineHeight: 1.9, fontSize: '0.88rem', fontWeight: 300 }}>{item.desc}</p>
                 </div>
@@ -321,22 +318,49 @@ export default function Design4() {
         {/* ── Philosophy ────────────────────────── */}
         <section style={{
           padding: '8rem 4rem',
-          background: 'radial-gradient(ellipse at center, rgba(100,40,10,0.4) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at center, rgba(217,112,22,0.25) 0%, transparent 70%)',
           textAlign: 'center',
         }}>
           <p style={{ fontFamily: lora.style.fontFamily, fontSize: 'clamp(1.4rem, 3vw, 2.3rem)', fontStyle: 'italic', color: 'rgba(253,246,236,0.4)', lineHeight: 1.6, maxWidth: '620px', margin: '0 auto' }}>
             "The sauna softens the body.<br />The ocean sharpens the mind.<br />
-            <span style={{ color: '#c4723a' }}>Together, they create a full reset.</span>"
+            <span style={{ color: '#D97016' }}>Together, they create a full reset.</span>"
           </p>
         </section>
 
-        {/* ── Plunge Photo ──────────────────────── */}
+        {/* ── Fire Atmosphere ───────────────────── */}
+        <section style={{
+          height: '60vh', minHeight: '400px',
+          backgroundImage: `url('/photos/CR-Sauna_056.jpg')`,
+          backgroundSize: 'cover', backgroundPosition: 'center 40%',
+          position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,12,28,0.55)' }} />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'radial-gradient(ellipse at center, rgba(217,112,22,0.2) 0%, transparent 65%)',
+            animation: 'emberFlicker 5s ease-in-out infinite',
+          }} />
+          <p style={{
+            position: 'relative', zIndex: 1,
+            fontFamily: lora.style.fontFamily,
+            fontSize: 'clamp(1.2rem, 3vw, 2rem)',
+            fontStyle: 'italic',
+            color: 'rgba(253,246,236,0.65)',
+            letterSpacing: '0.04em',
+            textAlign: 'center',
+            padding: '0 2rem',
+          }}>
+            The fire has been lit. The ocean is right outside.
+          </p>
+        </section>
+
+        {/* ── Photo Diptych ─────────────────────── */}
         <section className="d4-photos" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '55vh', minHeight: '380px' }}>
-          <div style={{ backgroundImage: `url('${IMGS.plungeSocial}')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
-            <div style={{ position: 'absolute', inset: 0, background: 'rgba(28,15,5,0.2)' }} />
+          <div style={{ backgroundImage: `url('/photos/CR-Sauna_003.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(12,26,50,0.15)' }} />
           </div>
-          <div style={{ backgroundImage: `url('${IMGS.interior}')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
-            <div style={{ position: 'absolute', inset: 0, background: 'rgba(28,15,5,0.15)' }} />
+          <div style={{ backgroundImage: `url('/photos/CR-Sauna_061.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(12,26,50,0.1)' }} />
           </div>
         </section>
 
@@ -349,12 +373,12 @@ export default function Design4() {
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div className="d4-events" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '6rem', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#c4723a', marginBottom: '1.5rem', opacity: 0.8 }}>Private Events & Upper Deck</p>
+                <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#D97016', marginBottom: '1.5rem', opacity: 0.8 }}>Private Events & Upper Deck</p>
                 <h2 style={{ fontFamily: lora.style.fontFamily, fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 700, color: '#fdf6ec', lineHeight: 1.1, marginBottom: '1.5rem' }}>
-                  The upper deck is designed for <em style={{ color: '#c4723a' }}>gathering</em>.
+                  The upper deck is designed for <em style={{ color: '#D97016' }}>gathering</em>.
                 </h2>
                 <p style={{ color: 'rgba(253,246,236,0.4)', lineHeight: 2.1, fontSize: '0.93rem', fontWeight: 300, marginBottom: '2.5rem' }}>
-                  Host intimate, elevated experiences. This is not just a booking —<br />it is a shared coastal experience.
+                  Host intimate, elevated experiences. This is not just a booking.<br />It is a shared coastal experience.
                 </p>
                 <div style={{ flexWrap: 'wrap', display: 'flex', gap: '0.25rem' }}>
                   {['Bachelorettes', 'Stagettes', 'Birthday Gatherings', 'Summer Events', 'Winter Events', 'Wellness Sessions', 'Corporate Retreats'].map((ev) => (
@@ -366,24 +390,24 @@ export default function Design4() {
               {/* Pricing rings */}
               <div className="d4-pricing" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
                 <div className="price-ring">
-                  <span style={{ fontFamily: lora.style.fontFamily, fontSize: '2.8rem', color: '#f0c080', fontWeight: 700, lineHeight: 1 }}>$250</span>
+                  <span style={{ fontFamily: lora.style.fontFamily, fontSize: '2.8rem', color: '#F5A623', fontWeight: 700, lineHeight: 1 }}>$250</span>
                   <span style={{ color: 'rgba(253,246,236,0.35)', fontSize: '0.72rem', textAlign: 'center', marginTop: '0.3rem' }}>Private · 2 guests</span>
                 </div>
                 <div style={{ display: 'flex', gap: '2rem' }}>
                   <div style={{
                     width: '110px', height: '110px', borderRadius: '50%',
-                    border: '1px solid rgba(240,192,128,0.2)',
+                    border: '1px solid rgba(245,166,35,0.2)',
                     display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    background: 'rgba(196,114,58,0.05)',
+                    background: 'rgba(217,112,22,0.05)',
                   }}>
-                    <span style={{ fontFamily: lora.style.fontFamily, fontSize: '1.6rem', color: '#c4723a', fontWeight: 600 }}>+$30</span>
+                    <span style={{ fontFamily: lora.style.fontFamily, fontSize: '1.6rem', color: '#D97016', fontWeight: 600 }}>+$30</span>
                     <span style={{ color: 'rgba(253,246,236,0.3)', fontSize: '0.65rem', textAlign: 'center' }}>per add&apos;l guest</span>
                   </div>
                   <div style={{
                     width: '110px', height: '110px', borderRadius: '50%',
-                    border: '1px solid rgba(240,192,128,0.2)',
+                    border: '1px solid rgba(245,166,35,0.2)',
                     display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    background: 'rgba(196,114,58,0.05)',
+                    background: 'rgba(217,112,22,0.05)',
                   }}>
                     <span style={{ fontFamily: lora.style.fontFamily, fontSize: '1.4rem', color: '#fdf6ec', fontWeight: 600, lineHeight: 1.1 }}>$42.50</span>
                     <span style={{ color: 'rgba(253,246,236,0.3)', fontSize: '0.65rem', textAlign: 'center' }}>drop-in session</span>
@@ -401,23 +425,23 @@ export default function Design4() {
         {/* ── Drinks ────────────────────────────── */}
         <section style={{ padding: '9rem 4rem' }}>
           <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#c4723a', marginBottom: '1.5rem', opacity: 0.8, textAlign: 'center' }}>Drinks & Add-Ons</p>
+            <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#D97016', marginBottom: '1.5rem', opacity: 0.8, textAlign: 'center' }}>Drinks & Add-Ons</p>
             <h2 style={{ fontFamily: lora.style.fontFamily, fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 700, color: '#fdf6ec', textAlign: 'center', marginBottom: '0.75rem' }}>
-              Simple. Clean. <em style={{ color: '#c4723a' }}>Intentional.</em>
+              Simple. Clean. <em style={{ color: '#D97016' }}>Intentional.</em>
             </h2>
             <p style={{ color: 'rgba(253,246,236,0.35)', textAlign: 'center', marginBottom: '3.5rem', fontWeight: 300, fontSize: '0.88rem', lineHeight: 1.8 }}>
               Minimal by design. Chosen to support the experience,<br />not distract from it.
             </p>
-            <div style={{ background: 'rgba(253,246,236,0.03)', borderRadius: '20px', border: '1px solid rgba(240,192,128,0.1)', overflow: 'hidden' }}>
+            <div style={{ background: 'rgba(253,246,236,0.03)', borderRadius: '20px', border: '1px solid rgba(245,166,35,0.1)', overflow: 'hidden' }}>
               {[
                 { name: 'Cultured Kombucha', price: '$7.00' },
                 { name: 'Glacier Water', price: '$5.00' },
                 { name: 'House Red Wine', price: 'TBD' },
                 { name: 'House White Wine', price: 'TBD' },
               ].map((d, i) => (
-                <div key={d.name} className="menu-item" style={{ padding: '1.4rem 2rem', borderBottom: i < 3 ? '1px solid rgba(240,192,128,0.08)' : 'none' }}>
+                <div key={d.name} className="menu-item" style={{ padding: '1.4rem 2rem', borderBottom: i < 3 ? '1px solid rgba(245,166,35,0.08)' : 'none' }}>
                   <span style={{ color: 'rgba(253,246,236,0.5)', fontSize: '0.9rem', fontWeight: 300 }}>{d.name}</span>
-                  <span style={{ fontFamily: lora.style.fontFamily, color: '#f0c080', fontSize: '1.05rem', fontWeight: 600 }}>{d.price}</span>
+                  <span style={{ fontFamily: lora.style.fontFamily, color: '#F5A623', fontSize: '1.05rem', fontWeight: 600 }}>{d.price}</span>
                 </div>
               ))}
             </div>
@@ -430,19 +454,19 @@ export default function Design4() {
         {/* ── CTA ───────────────────────────────── */}
         <section style={{
           padding: '10rem 4rem',
-          background: 'radial-gradient(ellipse at center bottom, rgba(100,40,10,0.5) 0%, rgba(45,18,8,0.6) 50%, #1c0f05 100%)',
+          background: 'radial-gradient(ellipse at center bottom, rgba(217,112,22,0.3) 0%, rgba(15,29,60,0.7) 50%, #0C1A32 100%)',
           textAlign: 'center',
           position: 'relative', overflow: 'hidden',
         }}>
           <div style={{
             position: 'absolute', bottom: '-20%', left: '50%', transform: 'translateX(-50%)',
             width: '100%', height: '70%',
-            background: 'radial-gradient(ellipse, rgba(196,114,58,0.15) 0%, transparent 65%)',
+            background: 'radial-gradient(ellipse, rgba(217,112,22,0.15) 0%, transparent 65%)',
             filter: 'blur(50px)', pointerEvents: 'none',
             animation: 'emberFlicker 5s ease-in-out infinite',
           }} />
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#c4723a', marginBottom: '2.5rem', opacity: 0.8 }}>Book Your Session</p>
+            <p style={{ fontSize: '0.62rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: '#D97016', marginBottom: '2.5rem', opacity: 0.8 }}>Book Your Session</p>
             <h2 style={{
               fontFamily: lora.style.fontFamily,
               fontSize: 'clamp(2.2rem, 5.5vw, 5rem)',
@@ -450,7 +474,7 @@ export default function Design4() {
               lineHeight: 1, marginBottom: '1.5rem',
             }}>
               Choose your session.<br />
-              <em style={{ color: '#c4723a' }}>Gather your people.</em>
+              <em style={{ color: '#D97016' }}>Gather your people.</em>
             </h2>
             <p style={{ color: 'rgba(253,246,236,0.35)', lineHeight: 2, marginBottom: '4rem', fontWeight: 300, maxWidth: '480px', margin: '0 auto 4rem' }}>
               Whether you are seeking stillness or celebration, Pacific Sauna & Ocean Plunge
@@ -465,15 +489,12 @@ export default function Design4() {
         {/* ── Footer ────────────────────────────── */}
         <footer style={{
           padding: '2.5rem 4rem',
-          borderTop: '1px solid rgba(240,192,128,0.08)',
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem',
+          borderTop: '1px solid rgba(245,166,35,0.08)',
+          textAlign: 'center',
         }}>
-          <p style={{ fontFamily: lora.style.fontFamily, color: 'rgba(240,192,128,0.35)', fontSize: '0.9rem', fontStyle: 'italic' }}>
+          <p style={{ fontFamily: lora.style.fontFamily, color: 'rgba(245,166,35,0.35)', fontSize: '0.9rem', fontStyle: 'italic' }}>
             Pacific Sauna & Ocean Plunge · Campbell River, BC
           </p>
-          <Link href="/" style={{ color: 'rgba(240,192,128,0.25)', textDecoration: 'none', fontSize: '0.68rem', letterSpacing: '0.18em', textTransform: 'uppercase' }}>
-            ← All Designs
-          </Link>
         </footer>
       </div>
     </>
